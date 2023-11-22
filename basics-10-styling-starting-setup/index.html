@@ -17,17 +17,32 @@
     <h1>Vue Dynamic Styling</h1>
 </header>
 <section id="styling">
-    <div class="demo" :style="{borderColor: boxASelected ? 'red' : '#ccc'}" @click="boxSelected('A')">{{ boxASelected
-        }}
+    <div class="demo"
+         :style="{borderColor: boxASelected ? 'red' : '#ccc'}"
+         @click="boxSelected('A')">
+        {{ boxASelected }}
     </div>
-    <div :class="boxBSelected ? 'demo active' : 'demo'" @click="boxSelected('B')">{{ boxBSelected
-        }}
+    <div :class="boxBSelected ? 'demo active' : 'demo'"
+         @click="boxSelected('B')">
+        {{ boxBSelected }}
     </div>
-    <div :class="{demo: true, active: boxCSelected}"  @click="boxSelected('C')">{{ boxCSelected
-        }}
+    <div :class="{demo: true, active: boxCSelected}"
+         @click="boxSelected('C')">
+        {{ boxCSelected }}
     </div>
-    <div class="demo" :class="{active: boxCSelected}"  @click="boxSelected('C')">{{ boxCSelected
-        }}
+    <div class="demo"
+         :class="{active: boxDSelected}"
+         @click="boxSelected('D')">
+        {{ boxDSelected }}
+    </div>
+    <div class="demo"
+         :class="boxEClasses"
+         @click="boxSelected('E')">
+        {{ boxESelected }}
+    </div>
+    <div :class="['demo', {active: boxFSelected}]"
+         @click="boxSelected('F')">
+        {{ boxFSelected }}
     </div>
 </section>
 </body>
